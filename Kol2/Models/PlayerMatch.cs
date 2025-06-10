@@ -10,7 +10,7 @@ public class PlayerMatch
     public int Mvps { get; set; }
     [Column(TypeName = "decimal")]
     [Precision(4, 2)]
-    public double? Rating { get; set; } = null;
+    public double Rating { get; set; }
     
     [ForeignKey(nameof(MatchId))]
     public int MatchId { get; set; }
