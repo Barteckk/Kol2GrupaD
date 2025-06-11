@@ -27,7 +27,7 @@ public class PlayerService : IPlayerService
         foreach (var matchDto in playerDto.Matches)
         {
             var match = await _context.Matches.FindAsync(matchDto.MatchId);
-            if (match == null) return new PlayerDto { PlayerId = -1 }; // Zwróć kod błędu
+            if (match == null) return new PlayerDto { PlayerId = -1 };
 
             var playerMatch = new PlayerMatch
             {
